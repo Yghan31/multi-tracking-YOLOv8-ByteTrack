@@ -1,8 +1,10 @@
 # cows-multi-tracking-YOLOv8-ByteTrack
 # Cows/Animal Multi-Tracking with YOLOv8 and ByteTrack
 
-## Overview
+## Demo
+This demo is a simple software that I created using my studies and courses.
 
+## Overview
 This software is designed for real-time object detection and tracking in video streams, using YOLO (You Only Look Once) for detection and ByteTrack for multi-object tracking. It is suitable for tracking objects in video footage, and can run on both GPU and CPU.
 
 **Key Features:**
@@ -59,7 +61,7 @@ The system is built around two main threads:
 
 Below is an example of the software in action. The left side shows YOLO detections (blue boxes), and the right side shows ByteTrack tracking results (green boxes with IDs):
 
-![Tracking Example](example_output.png)
+![Tracking Example](resultado.jpg)
 
 *(Replace the above link with the actual image after uploading to your repo.)*
 
