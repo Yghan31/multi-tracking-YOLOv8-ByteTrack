@@ -60,7 +60,7 @@ The system is built around two main threads:
 
 ## Example Output
 
-Below is an example of the software in action. The left side shows YOLO detections (blue boxes), and the right side shows ByteTrack tracking results (green boxes with IDs):
+Below is an example of the software in action. It shows ByteTrack tracking results (green boxes with IDs):
 
 ![image](https://github.com/user-attachments/assets/c9d7b486-7a81-4d7c-89ae-cae611a620bf)
 ---
