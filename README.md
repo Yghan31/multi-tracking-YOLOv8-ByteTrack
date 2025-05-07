@@ -127,8 +127,8 @@ main.py             # Entry point
 ---
 
 ## Example Result
+![image](https://github.com/user-attachments/assets/c9d7b486-7a81-4d7c-89ae-cae611a620bf)
 
-*(Insert the image you provided here, or reference it as shown above.)*
 
 ---
 
