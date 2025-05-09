@@ -1,4 +1,4 @@
-# cows-multi-tracking-YOLOv8-ByteTrack
+# multi-tracking-YOLOv8-ByteTrack
 # Cows/Animal Multi-Tracking with YOLOv8 and ByteTrack
 
 ## Demo
